@@ -83,7 +83,7 @@ endfu
 fu! PomodoroMarkTodoElapsed(marker)
     "if a pomodoro has been allocated tick it off, otherwise add an unplanned pomodoro
     try
-        exec 's/\[ ]/['.a:marker.']'.(a:marker == '-'?'/g':'')
+        exec 's/\([[(]\) \([)\]]\)/\1'.a:marker.'\2'.(a:marker == '-'?'/g':'')
     catch /E486/
         normal! A(X)
     endtry
