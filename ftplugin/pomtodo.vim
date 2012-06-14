@@ -51,6 +51,7 @@ fu! CountCompletedPomodorosInBuffer()
 endfu
 
 setlocal statusline=[%{CountCompletedPomodorosInBuffer()}/%{CountPomodorosInBuffer()}]
+setlocal cursorline
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
