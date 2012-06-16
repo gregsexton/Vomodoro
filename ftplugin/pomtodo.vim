@@ -8,6 +8,8 @@ let s:cpo_save = &cpo
 set cpo&vim
 
 nnoremap <buffer> <silent> q :wq<cr>
+nnoremap <buffer> <silent> <esc> :wq<cr>
+
 "this should be able to take a count:
 nnoremap <buffer> <silent> <cr> :call PomodoroAddTickBox()<cr>
 nnoremap <buffer> <silent> <space> :call PomodoroMarkTodoElapsed("X")<cr>
