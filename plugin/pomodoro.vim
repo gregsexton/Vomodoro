@@ -66,9 +66,14 @@ fu! s:TransferAndOpenArchive() abort
 endfu
 
 fu! s:PomodoroAlignCheckBoxes()
-    if exists(":Tabularize")
-        Tabularize /\c[([][ X-][)\]]/l1l0
-    endif
+    let save_cursor = getpos('.')
+    try
+        if exists(":Tabularize")
+            %Tabularize /\c[([][ X-][)\]]/l1l0
+        endif
+    finally
+        call setpos('.', save_cursor)
+    endtry
 endfu
 
 fu! PomodoroAddTickBox(cnt)
