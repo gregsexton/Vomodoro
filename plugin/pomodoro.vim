@@ -23,7 +23,8 @@ endif
 
 "TODO: break out commands for splits, vertical and tab as well as normal.
 command! -nargs=0 -bar PomodoroToDoToday call s:OpenToDoToday()
-command! -nargs=0 -bar PomodoroArchive call s:TransferAndOpenArchive()
+command! -nargs=0 -bar PomodoroOpenArchive call s:OpenArchive()
+command! -nargs=0 -bar PomodoroPerformArchive call s:TransferAndOpenArchive()
 
 " Functions: {{{1
 
