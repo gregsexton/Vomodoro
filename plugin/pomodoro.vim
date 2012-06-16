@@ -70,11 +70,11 @@ fu! s:PomodoroAlignCheckBoxes()
     endif
 endfu
 
-fu! PomodoroAddTickBox()
+fu! PomodoroAddTickBox(cnt)
     if getline('.') =~ '\[X]'
-        normal! A( )
+        exec 'normal! '.a:cnt.'A( )'
     else
-        normal! A[ ]
+        exec 'normal! '.a:cnt.'A[ ]'
     endif
 
     call s:PomodoroAlignCheckBoxes()

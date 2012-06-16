@@ -11,7 +11,7 @@ nnoremap <buffer> <silent> q :wq<cr>
 nnoremap <buffer> <silent> <esc> :wq<cr>
 
 "this should be able to take a count:
-nnoremap <buffer> <silent> <cr> :call PomodoroAddTickBox()<cr>
+nnoremap <buffer> <silent> <cr> :<c-u>call PomodoroAddTickBox(v:count1)<cr>
 nnoremap <buffer> <silent> <space> :call PomodoroMarkTodoElapsed("X")<cr>
 nnoremap <buffer> <silent> - :call PomodoroMarkTodoElapsed("-")<cr>
 
